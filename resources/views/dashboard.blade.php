@@ -1,13 +1,37 @@
-<<!DOCTYPE html>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <div class="p-6 sm:px-20 bg-white border-b border-gray-200">
+                    <div class="mt-8 text-2xl">
+                        Bienvenido a la Aplicación de Gestión
+                    </div>
+
+                    <div class="mt-6 text-gray-500">
+                        Utiliza el menú de navegación para gestionar maquinaria, parcelas y acciones.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</x-app-layout>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @vite('resources/css/app.css')
 </head>
 <body>
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
                 <div class="position-sticky">
@@ -38,9 +62,9 @@
                 <p>Bienvenido al Dashboard</p>
             </main>
         </div>
-    </div>
+    </div> -->
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    @vite('resources/js/app.js')
 </body>
 </html>
 
